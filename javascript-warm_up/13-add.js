@@ -1,6 +1,7 @@
 function add(a, b) {
-  return a + b;
+  console.log(result);
 }
 
-const result = add(3, 5);
-console.log(result);
+add(3, 5);
+
+
