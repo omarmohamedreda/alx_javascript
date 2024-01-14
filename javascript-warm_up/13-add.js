@@ -2,9 +2,17 @@ function add(a, b) {
   console.log(a+b);
 }
 
-add(3,5);
-add(-4,85);
-add(-93,-4);
-add(-0,89);
+
+let a = prompt("Enter the first number:");
 
 
+a = parseFloat(a);
+
+
+let b = prompt("Enter the second number:");
+
+
+b = parseFloat(b);
+
+add(a,b);
+ 
