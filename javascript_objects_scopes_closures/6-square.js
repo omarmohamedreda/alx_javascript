@@ -1,20 +1,19 @@
 #!/usr/bin/node
-const Square_Parent = require("./5-square");
+const Rectangle = require('./5-square'); // Importing Rectangle, but not using it in the code
 
-class Square extends Square_Parent
-{
-    constructor(size)
-    {
-        super(size)
+class Square extends Rectangle { // Extending Rectangle instead of Square
+  constructor(size) { // Using constructor instead of super for initializing properties
+    super(size, size); // Calling super() with the appropriate arguments
+  }
+
+  charPrint(c) {
+    if (c === undefined) {
+      c = 'X';
     }
-    charPrint(c = 'X')
-    {
-        this.c = c
-        for (let i=0; i<this.height; i++)
-        {
-            console.log(this.c.repeat(this.width))
-        }
+    for (let i = 0; i < this.height; i++) {
+      console.log(c.repeat(this.width));
     }
+  }
 }
 
 module.exports = Square;
