@@ -1,31 +1,27 @@
-const Rectangle = require('./4-rectangle.js');
-//5-square
+// Square.js
+const Rectangle = require('./5-square');
 
 class Square extends Rectangle {
-    constructor(size){
-        super(size, size);
+  constructor(size) {
+    super(size);
+  }
+
+  charPrint(c) {
+    if (c === undefined) {
+      c = 'X'; // Default to 'X' if c is not defined
+      super.print(c)
     }
-    
-    charPrint(c) {
-        if (typeof c === 'undefined') {
-            for (let i=0; i <this.height; i++) {
-                for (let j=0; j <this.width; j++) {
-                    process.stdout.write('X');
-                }            
-                process.stdout.write('\n');
+    else{
+        if (this.width && this.height) {
+            for (let i = 0; i < this.height; i++) {
+              console.log(c.repeat(this.width));
             }
-        }
-        
-        else {
-            for (let i=0; i <this.height; i++) {
-                for (let j=0; j <this.width; j++) {
-                    process.stdout.write(c);
-                }            
-                process.stdout.write('\n');
-            }
-        }
+          }
+       
     }
 
+    
+  }
 }
 
 module.exports = Square;
