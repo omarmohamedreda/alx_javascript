@@ -1,8 +1,10 @@
-#!/usr/bin/node
-const Rectangle = require('./4-rectangle');
+// import { Rectangle } from './4-rectangle.js';
+const Rectangle = require('./4-rectangle.js');
+
 class Square extends Rectangle {
-    constructor(side) {
-        super(side, side);
+    constructor(size){
+        super(size, size);
     }
 }
-module.exports = Square;
+
+module.exports = Square
